@@ -24,8 +24,8 @@ const music = [
   {
     title: "[Song title]",
     artist: "[Artist]",
-    note: "[Why she wanted people to listen to it]",
-    url: "https://www.youtube.com/"
+    note: "[Things we want to add]",
+    url: "https://youtu.be/hdjL8WXjlGI?si=u9KDbS6e5r3ehnHI"
   },
 
   {
@@ -35,7 +35,6 @@ const music = [
     url: "https://open.spotify.com/"
   }
 ];
-
 /*
   You can add other structured content here later if useful:
   quotations, photographs, links, dates, etc.

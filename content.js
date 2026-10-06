@@ -24,7 +24,7 @@ const music = [
   {
     title: "[Song title]",
     artist: "[Artist]",
-    note: "[Things we want to add]",
+    note: "[Stuff to say about the song]",
     url: "https://youtu.be/hdjL8WXjlGI?si=u9KDbS6e5r3ehnHI"
   },
 

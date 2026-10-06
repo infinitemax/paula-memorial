@@ -22,8 +22,8 @@
 
 const music = [
   {
-    title: "[Song title]",
-    artist: "[Artist]",
+    title: "Star Trek - original theme",
+    artist: "James T Kirk",
     note: "[Stuff to say about the song]",
     url: "https://youtu.be/hdjL8WXjlGI?si=u9KDbS6e5r3ehnHI"
   },

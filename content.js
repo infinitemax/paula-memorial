@@ -29,9 +29,16 @@ const music = [
   },
 
   {
-    title: "[Another song]",
-    artist: "[Artist]",
-    note: "[Optional note]",
+    title: "Wipeout",
+    artist: "The Surfaris",
+    note: "Paula loved surfing",
+    url: "https://www.youtube.com/watch?v=dBURLdhmmZ8"
+  },
+
+  {
+    title: "Another song",
+    artist: "Who by?",
+    note: "Random - try spotify",
     url: "https://open.spotify.com/"
   }
 ];

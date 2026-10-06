@@ -1,0 +1,252 @@
+/* 
+  Memorial site
+  --------------------------------------------------
+  Plain CSS, no framework or external fonts.
+  Change the variables below to alter the overall feel.
+*/
+
+:root {
+  --background: #f7f6f2;
+  --surface: #eeece6;
+  --text: #20201e;
+  --muted: #686762;
+  --line: #d8d5cd;
+  --accent: #3e5146;
+  --max-width: 1120px;
+  --narrow-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin-inline: auto;
+}
+
+.narrow {
+  max-width: var(--narrow-width);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-title {
+  font-weight: 650;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  font-size: 0.9rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+.intro {
+  padding: clamp(100px, 17vw, 190px) 0 clamp(90px, 12vw, 150px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 650;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.lead {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--muted);
+}
+
+.section {
+  padding: clamp(80px, 10vw, 130px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-muted {
+  background: var(--surface);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(40px, 8vw, 110px);
+}
+
+.prose {
+  max-width: 720px;
+}
+
+.prose p:first-child {
+  margin-top: 0;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 44px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.music-list {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.music-item {
+  background: var(--background);
+  padding: 26px 28px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+
+.music-item h3 {
+  margin-bottom: 5px;
+}
+
+.music-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.music-meta {
+  font-size: 0.88rem;
+  margin-top: 8px !important;
+}
+
+.listen {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--text);
+  padding: 9px 15px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.listen:hover {
+  background: var(--text);
+  color: var(--background);
+}
+
+.memory {
+  padding: 0 0 36px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.memory:last-child {
+  border-bottom: 0;
+}
+
+.byline {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0 70px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+
+  .header-inner {
+    min-height: 60px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .music-item {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .listen {
+    justify-self: start;
+  }
+}

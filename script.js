@@ -136,7 +136,13 @@ function escapeHtml(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    .replaceAll("'", "&#039;")
+    .replaceAll("&lt;i&gt;", "<i>")
+    .replaceAll("&lt;/i&gt;", "</i>")
+    .replaceAll("&lt;em&gt;", "<em>")
+    .replaceAll("&lt;/em&gt;", "</em>")
+    .replaceAll("&lt;strong&gt;", "<strong>")
+    .replaceAll("&lt;/strong&gt;", "</strong>");
 }
 
 

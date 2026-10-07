@@ -1,17 +1,25 @@
-/* 
+/*
   Memorial site
+  Purple and fuchsia palette
   --------------------------------------------------
-  Plain CSS, no framework or external fonts.
-  Change the variables below to alter the overall feel.
+  Main purple: #5B1C9C
+  Fuchsia accent: #E5007D
+  Warm cream background with soft lavender surfaces
 */
 
 :root {
-  --background: #f7f6f2;
-  --surface: #eeece6;
-  --text: #20201e;
-  --muted: #686762;
-  --line: #d8d5cd;
-  --accent: #3e5146;
+  --background: #FFFCF7;
+  --surface: #F3EAF8;
+  --text: #30243A;
+  --muted: #766982;
+  --line: #E3D5E9;
+
+  --accent: #5B1C9C;
+  --accent-dark: #421273;
+  --pink: #E5007D;
+  --pink-light: #FCE5F1;
+  --purple-light: #EDE0F7;
+
   --max-width: 1120px;
   --narrow-width: 760px;
 }
@@ -22,19 +30,26 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.7;
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--pink);
 }
 
 .container {
@@ -46,6 +61,8 @@ a {
   max-width: var(--narrow-width);
 }
 
+/* Header and navigation */
+
 .site-header {
   border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--background) 94%, transparent);
@@ -56,7 +73,7 @@ a {
 }
 
 .header-inner {
-  min-height: 68px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,13 +84,14 @@ a {
   font-weight: 650;
   text-decoration: none;
   letter-spacing: 0;
-  color: #5B1C9C;
+  color: var(--accent);
   font-family: "Chewy", system-ui;
-
+  font-size: 1.65rem;
 }
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   font-size: 0.9rem;
 }
@@ -81,19 +99,28 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--muted);
+  transition: color 0.2s ease;
 }
 
-nav a:hover {
-  color: var(--text);
+nav a:hover,
+nav a:focus-visible {
+  color: var(--pink);
 }
+
+/* Intro / hero */
 
 .intro {
   padding: clamp(100px, 17vw, 190px) 0 clamp(90px, 12vw, 150px);
+  background:
+    radial-gradient(ellipse at 85% 20%,
+      #e3cef1 0,
+      transparent 60%),
+    #F3EAF8;
 }
 
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--muted);
+  color: var(--pink);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -103,10 +130,9 @@ nav a:hover {
 h1,
 h2,
 h3 {
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  line-height: 1.2;
   margin-top: 0;
-
+  color: var(--accent);
 }
 
 h1 {
@@ -114,22 +140,23 @@ h1 {
   font-weight: 650;
   margin-bottom: 28px;
   font-family: "Chewy", system-ui;
-  letter-spacing: .03em;
-  /* try sofia: 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  font-family: "Sofia", sans-serif;
-  */
-  color: #5B1C9C
+  letter-spacing: 0.02em;
+
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 600;
+  font-family: "Chewy", system-ui;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 650;
+  letter-spacing: 0;
+  margin-bottom: 12px;
 }
 
 .lead {
@@ -138,6 +165,8 @@ h3 {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   color: var(--muted);
 }
+
+/* General sections */
 
 .section {
   padding: clamp(80px, 10vw, 130px) 0;
@@ -164,18 +193,20 @@ h3 {
 
 .section-heading {
   max-width: 700px;
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
 
 .section-heading>p:last-child {
   color: var(--muted);
 }
 
+/* Music */
+
 .music-list {
   display: grid;
-  gap: 1px;
-  background: var(--line);
+  gap: 0;
   border: 1px solid var(--line);
+  background: var(--background);
 }
 
 .music-item {
@@ -185,6 +216,16 @@ h3 {
   grid-template-columns: 1fr auto;
   gap: 24px;
   align-items: center;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.2s ease;
+}
+
+.music-item:last-child {
+  border-bottom: 0;
+}
+
+.music-item:hover {
+  background: #FFF5FB;
 }
 
 .music-item h3 {
@@ -199,22 +240,74 @@ h3 {
 .music-meta {
   font-size: 0.88rem;
   margin-top: 8px !important;
+  font-style: italic;
 }
 
-.listen {
+/* Listen buttons and other buttons */
+
+.listen,
+.read-poem {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--text);
-  padding: 9px 15px;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--pink);
+  border-radius: 6px;
+  padding: 10px 18px;
+  background: var(--pink);
+  color: white;
   text-decoration: none;
-  font-size: 0.88rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
   white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.listen:hover {
-  background: var(--text);
-  color: var(--background);
+.listen:hover,
+.read-poem:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
 }
+
+.listen:active,
+.read-poem:active {
+  transform: translateY(1px);
+}
+
+.listen:focus-visible,
+.read-poem:focus-visible,
+nav a:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}
+
+/* Embedded YouTube players */
+
+.youtube-player {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.youtube-player iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}
+
+.youtube-player[hidden] {
+  display: none;
+}
+
+/* Memories */
 
 .memory {
   padding: 0 0 36px;
@@ -226,66 +319,20 @@ h3 {
   border-bottom: 0;
 }
 
+.memory h3 {
+  color: var(--accent);
+}
+
 .byline {
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-footer {
-  border-top: 1px solid var(--line);
-  padding: 40px 0 70px;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-@media (max-width: 700px) {
-  .container {
-    width: min(calc(100% - 32px), var(--max-width));
-  }
-
-  .header-inner {
-    min-height: 60px;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .music-item {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .listen {
-    justify-self: start;
-  }
-}
-
-.youtube-player {
-  margin-top: 1rem;
-  width: 100%;
-  max-width: 500px;
-}
-
-.youtube-player iframe {
-  width: 100%;
-  height: 280px;
-  border: 0;
-  border-radius: 8px;
-}
-
-.section-heading {
-  margin-bottom: 48px;
-}
+/* Poems and backstories */
 
 .poem {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 64px;
   padding: 0 0 48px;
   margin-bottom: 48px;
@@ -294,6 +341,7 @@ footer {
 
 .poem:last-child {
   border-bottom: 0;
+  margin-bottom: 0;
 }
 
 .poem-main h3,
@@ -303,11 +351,11 @@ footer {
 }
 
 .poem-text {
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .poem-text p {
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .poem-text p:last-child {
@@ -319,20 +367,89 @@ footer {
 }
 
 .poem-backstory {
-  line-height: 1.7;
+  line-height: 1.8;
+  padding-left: 32px;
+  border-left: 2px solid #E9B4D4;
 }
 
 .backstory-text p {
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .backstory-text p:last-child {
   margin-bottom: 0;
 }
 
+/* Footer */
+
+footer {
+  border-top: 2px solid var(--pink);
+  padding: 40px 0 70px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: var(--surface);
+}
+
+/* Responsive layout */
+
 @media (max-width: 768px) {
   .poem {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .poem-backstory {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+
+  .header-inner {
+    min-height: 64px;
+    gap: 12px;
+  }
+
+  .site-title {
+    font-size: 1.35rem;
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 0.82rem;
+  }
+
+  .content-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
+  }
+
+  .music-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .listen {
+    justify-self: start;
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

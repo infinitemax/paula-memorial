@@ -49,26 +49,39 @@ const music = [
 
 const poems = [
   {
-    title: "Random Title",
-    author: "Random author",
-    text: `Lorem ipsum dolor sit amet consectetur adipiscing 
-    elit deserunt ullamco. Facere laborum corrupti odio eos 
-    fuga tempore officia facilis laborum veniam. Ea dignissimos 
-    mollitia excepturi irure consectetur.
+    title: "Warning",
+    author: "Jenny Joseph",
+    text: `When I am an old woman I shall wear purple
+With a Red Hat which doesn't go, and doesn't suit me.
+And I shall spend my pension on brandy and summer gloves
+And satin sandals. And say we've no money for butter.
+I shall sit down on the pavement when I'm tired
+And gobble up samples in shops and press alarm bells
+And run my stick along the public railings
+And make up for the sobriety of my youth.
+I shall go out in my slippers in the rain
+And pick the flowers in other people's gardens
+And learn to spit.
 
-Maxime dolor provident ut fugiat anim nostrud. 
-Sunt illum animi sit facilis blanditiis ut cillum 
-elit laboris. Ullamco ea rerum in sunt soluta est 
-animi ea. Odio aliqua pariatur laborum quas dolore 
-nihil et harum autem. Sed aut autem sed tempor 
-lorem quo at et nobis ipsum dolore.
+You can wear terrible shirts and grow more fat
+And eat three pounds of sausages at a go
+Or only bread and pickle for a week
+And hoard pens and pencils and beer mats
+and things in boxes.
 
-Fugiat labore nam irure officia id eu culpa 
-imperdiet eligendi corrupti. Officia dolore 
-blanditiis animi magna ea veniam esse consequatur 
-non pariatur. Adipiscing ex eu non nam ex 
-nostrud cum deserunt ea vel.`
+But now we must have clothes that keep us dry
+And pay our rent and not swear in the street
+And to set a good example for the children.
+We must have friends to dinner and read the papers.
+But maybe I ought to practise a little now?
+So people who know me are not too shocked and surprised
+When suddenly I am old, and start to wear purple.`,
+    backstory: `Won my first gold medal for speech and drama in Castleconnell with a
+recitation of this, so links me to Dad’s family, and my mother’s side
+through her determination that I have the ability to do this, the words
+were amusing at the time but now prophetic and speak of/for me`
   },
+
 
   {
     title: "title 2",

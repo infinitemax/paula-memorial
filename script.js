@@ -89,16 +89,30 @@ const poemsList = document.querySelector("#poems-list");
 
 poems.forEach((poem) => {
   const article = document.createElement("article");
-  article.className = "memory poem";
+  article.className = "poem";
 
   article.innerHTML = `
-    <h3>${escapeHtml(poem.title)}</h3>
+    <div class="poem-main">
+      <h3>${escapeHtml(poem.title)}</h3>
 
-    <div class="poem-text">
-      ${formatPoem(poem.text)}
+      <div class="poem-text">
+        ${formatPoem(poem.text)}
+      </div>
+
+      <p class="byline">— ${escapeHtml(poem.author)}</p>
     </div>
 
-    <p class="byline">— ${escapeHtml(poem.author)}</p>
+    ${poem.backstory
+      ? `
+          <div class="poem-backstory">
+            <h3>Backstory</h3>
+            <div class="backstory-text">
+              ${formatPoem(poem.backstory)}
+            </div>
+          </div>
+        `
+      : ""
+    }
   `;
 
   poemsList.appendChild(article);
@@ -111,17 +125,6 @@ function formatPoem(text) {
     .map((stanza) => `<p>${stanza.replaceAll("\n", "<br>")}</p>`)
     .join("");
 }
-
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
 
 
 function escapeHtml(value) {

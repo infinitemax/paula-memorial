@@ -46,3 +46,37 @@ const music = [
   You can add other structured content here later if useful:
   quotations, photographs, links, dates, etc.
 */
+
+const poems = [
+  {
+    title: "Random Title",
+    author: "Random author",
+    text: `Lorem ipsum dolor sit amet consectetur adipiscing 
+    elit deserunt ullamco. Facere laborum corrupti odio eos 
+    fuga tempore officia facilis laborum veniam. Ea dignissimos 
+    mollitia excepturi irure consectetur.
+
+Maxime dolor provident ut fugiat anim nostrud. 
+Sunt illum animi sit facilis blanditiis ut cillum 
+elit laboris. Ullamco ea rerum in sunt soluta est 
+animi ea. Odio aliqua pariatur laborum quas dolore 
+nihil et harum autem. Sed aut autem sed tempor 
+lorem quo at et nobis ipsum dolore.
+
+Fugiat labore nam irure officia id eu culpa 
+imperdiet eligendi corrupti. Officia dolore 
+blanditiis animi magna ea veniam esse consequatur 
+non pariatur. Adipiscing ex eu non nam ex 
+nostrud cum deserunt ea vel.`
+  },
+
+  {
+    title: "title 2",
+    author: "author 2",
+    text: `Your second poem goes here.
+
+You can have as many
+lines and stanzas
+as you like.`
+  }
+];

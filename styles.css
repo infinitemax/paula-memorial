@@ -267,3 +267,19 @@ footer {
   border: 0;
   border-radius: 8px;
 }
+
+.poem-text {
+  line-height: 1.7;
+}
+
+.poem-text p {
+  margin-bottom: 1.5rem;
+}
+
+.poem-text p:last-child {
+  margin-bottom: 0;
+}
+
+.poem .byline {
+  margin-top: 1.5rem;
+}

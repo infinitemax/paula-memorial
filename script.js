@@ -85,6 +85,45 @@ function getYouTubeVideoId(url) {
 }
 
 
+const poemsList = document.querySelector("#poems-list");
+
+poems.forEach((poem) => {
+  const article = document.createElement("article");
+  article.className = "memory poem";
+
+  article.innerHTML = `
+    <h3>${escapeHtml(poem.title)}</h3>
+
+    <div class="poem-text">
+      ${formatPoem(poem.text)}
+    </div>
+
+    <p class="byline">— ${escapeHtml(poem.author)}</p>
+  `;
+
+  poemsList.appendChild(article);
+});
+
+
+function formatPoem(text) {
+  return escapeHtml(text)
+    .split("\n\n")
+    .map((stanza) => `<p>${stanza.replaceAll("\n", "<br>")}</p>`)
+    .join("");
+}
+
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")

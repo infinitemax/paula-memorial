@@ -99,7 +99,10 @@ poems.forEach((poem) => {
         ${formatPoem(poem.text)}
       </div>
 
-      <p class="byline">— ${escapeHtml(poem.author)}</p>
+      ${poem.author
+      ? `<p class="byline">— ${escapeHtml(poem.author)}</p>`
+      : ""
+    }
     </div>
 
     ${poem.backstory

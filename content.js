@@ -20,32 +20,262 @@
   by script.js. There is no need to commit to that now.
 */
 
-const music = [
+const musicCategories = [
   {
-    title: "Star Trek - original theme",
-    artist: "James T Kirk",
-    note: "[Stuff to say about the song]",
-    url: "https://youtu.be/hdjL8WXjlGI?si=u9KDbS6e5r3ehnHI"
+    id: 1,
+    title: "Music from my childhood and youth",
+    description: "These are a small number of songs and music that call to mind growing up in Limerick and taking my first steps away. Inevitably they’re slightly eclectic! Some of them resonant with later experiences…"
   },
-
   {
-    title: "Wipeout",
-    artist: "The Surfaris",
-    note: "Paula loved surfing",
-    url: "https://www.youtube.com/watch?v=dBURLdhmmZ8"
+    id: 2,
+    title: "Family",
+    description: "Songs to remember my family by…"
   },
-
   {
-    title: "Another song",
-    artist: "Who by?",
-    note: "Random - try spotify",
-    url: "https://open.spotify.com/"
+    id: 3,
+    title: "Classical music",
+    description: "I’m not a very knowledgeable or widely listened classical music person, but there are a small number of pieces that I return to again and again and enjoy. The enjoyment stems from the calming and soothing effect the music has on my soul …"
+  },
+  {
+    id: 4,
+    title: "Did I mention I love Eurovision?",
+    description: "I love Eurovision. Yes I know it’s tacky and in recent years has lost some of its lustre and the politicking is more ominous but I treasure the times that it gave Ireland a world stage (before we sent the rapping turkey to represent us!). On compiling my favourite songs, I realised there is a certain bouncy quality shared between many of them! Enjoy!"
+  },
+  {
+    id: 5,
+    title: "Science Fiction Tracks"
+  },
+  {
+    id: 6,
+    title: "Songs and music that I like and make me happy!",
+    description: "Sometimes I just come across songs that resonate with me. It can be because of the lyrics, the music, the context or none of the above. I’ve noticed in compiling them that the voices tend to be female, the lyrics strong and demanding and the music has an underlying thumping quality. Enjoy!"
+  },
+  {
+    id: 7,
+    title: "Love and Sarah",
+    subcategories: [
+      {
+        id: "1",
+        title: "Songs that mark our love story",
+        description: ""
+      },
+      {
+        id: "2",
+        title: "More raunchy songs that mark our love story. You have been warned!",
+        description: ""
+      },
+      {
+        id: "3",
+        title: "Songs that speak to our love story",
+        description: ""
+      }]
   }
 ];
-/*
-  You can add other structured content here later if useful:
-  quotations, photographs, links, dates, etc.
-*/
+
+
+
+const music = [
+  {
+    title: "Dancing Queen",
+    artist: "Abba",
+    note: "Music of my teenage years resurrected as celebration a few years later: I had just been elected President of the Irish History Students’ Association at its annual conference in Mullingar, Co Westmeath, February 1990. I hit the floor at the disco after the AGM surprising myself and others at the enthusiastic nature [code for rubbish but full on!] of my dancing…",
+    url: "https://www.youtube.com/watch?v=xFrGuyw1V8s",
+    category: 1
+  },
+  {
+    title: "One Way or Another",
+    artist: "Debbie Harry",
+    note: "Thankfully skipped the Bay City Rollers in my teens (the tartan army!) and loved Blondie! An early teenage music crush – I just loved the way it caught me up in things I hadn’t even started to imagine!!",
+    url: "https://youtu.be/_zBwRDEFMRY?si=Nia81xWAlNn_pth_",
+    category: 1
+  },
+  {
+    title: "Stay",
+    artist: "Shakespears Sister",
+    note: "Despite the incorrectly spelled band name(!) a memory of a late teenage song I loved with an Irish foundation and one of the few overlaps in musical taste with my sister Liza who channelled Siobhan Fahey’s look and vibe.",
+    url: "https://www.youtube.com/watch?v=YCYaALgW80c",
+    category: 1
+  },
+  {
+    title: "I Dreamt I Dwelt in Marble Halls",
+    artist: "Joan Sunderland",
+    note: "My <i>mother’s</i> favourite piece of music. When she was lost to dementia in her nursing home, I’d put this on and every time at the exact same point in the song, she’d close her eyes, lift her hand, start conducting (remarking on the beauty of the voice), sigh deeply and join in. She’d relax utterly having found her sublime.",
+    url: "https://youtu.be/yebOy5Ne6bQ?si=GGHiBq6GrM9ze4NU",
+    category: 2
+  },
+  {
+    title: "The Walls of Limerick",
+    artist: "Traditional",
+    note: `For my <i>Dad</i>. He loved diddly-di music of all kinds and I know that he wished he could play more – he could play the concertina by ear. I’ve chosen this piece not necessarily because it was his favourite but rather because it epitomises all of the ceidhli music we hummed and beat rhythm to over the years. The title gives something away too!`,
+    url: "https://youtu.be/4puxon__85M?si=YcxG3UWslxI46goY",
+    category: 2
+  },
+  {
+    title: "Liza Song 1",
+    artist: "Liza Coonerty",
+    note: "For <i>Liza</i>. At the time of her death, Liza was singing jazz and jazz adjacent music [semi] professionally, grafting away on the local scene. She’s have probably built up enough of a reputation to make her living. She loved performing and I think she’d like that her music lingers on. When she died, Mam and I put “your song will live forever in our hearts” on her memorial card. As our hearts are stilled, this echo of her songbook will have to suffice.",
+    url: "",
+    category: 2
+  },
+  {
+    title: "Liza Song 2",
+    artist: "Liza Coonerty",
+    note: "We will need to add this.",
+    url: "",
+    category: 2
+  },
+  {
+    title: "The Long Song",
+    artist: "Dr Who",
+    note: "For <i>Daisy</i> - we have Dr Who in common, agree on some commonalities, disagree on others on the show but love the thing - a bit like our relationship! I hope your long song transcends, warrior.",
+    url: "https://youtu.be/WyYmxDxSZ4A?si=0-CwndSkjjnm8GWT",
+    category: 2
+  },
+  {
+    title: "Everything is AWESOME",
+    artist: "Tegan and Sara",
+    note: "For <i>Gabe</i>: Being a Granny makes me a different person, being Gabriel’s Granny completes the family Sarah has enfolded me in. Gabriel, everything isn’t awesome all the time, but much is it is and enough of it is because of the love of your Fam. Use it, enjoy it and I’ll miss being part of it but remember I will always love you. Live your dreams…",
+    url: "https://www.youtube.com/watch?v=StTqXEQ2l-Y",
+    category: 2
+  },
+  {
+    title: "My Wife is on a Diet",
+    artist: "Leslie Sarony and Harry Hudson and his Melody Men",
+    note: "For <i>Rose</i> as we share a desire for lovely gourmet food and experimentation (thanks for the caviar!) and would be as crestfallen as this poor man from my favourite era (1920s). I love your enthusiasm Rose, your ability to take the mundane and infuse it with joy and then sprinkle an extra layer of infectious happiness on top. Thank you!",
+    url: "https://youtu.be/f2h2fPwcopo?si=4rbhsSW_-kAMYT4B",
+    category: 2
+  },
+  {
+    title: "Baidin Fheilimi",
+    artist: "Sinead O’Connor",
+    note: "For <i>Annie and Max</i>, as this fits the country pub music session vibe you both love. All Irish school children learned to sing Baidin Fheilimi at some stage, so I include it to remember my singing Irish songs in classrooms across many years. Sinead singing it in Sean Nos style (literally “old style”) adds extra pathos and a strange type of authenticity- I like it for the quality of her voice and feel sad for her life’s search for meaning.  It’s about Phelim’s little, lively, charming boat and Phelim sailing it to various ports and bays in Donegal to catch fish. It also carries the ghostly overlay of a 17th century Irish chieftain, escaping his enemies in his straight, willing and tiny boat.",
+    url: "https://youtu.be/3ecK0dkBUTc?si=giYfR62AYQI0GkzL",
+    category: 2
+  },
+  {
+    title: "Trucks",
+    artist: "Jake Monaco",
+    note: "For <i>Sarah, Gabriel and I</i>. The three of us celebrating [Disney] Cars on the road with Lightening and Mater, just wishing the journey together was longer.",
+    url: "https://youtu.be/ok59hIY6SAc?si=Wg2d9kCwcsBOyj_o",
+    category: 2
+  },
+  {
+    title: "Tweaking the Nipple",
+    artist: "John Brookman",
+    note: "For <i>John</i> or more to the point, by John. Thank you for this ditty to mark Sarah and my civil partnership. It took a point of contention and turned it into a celebration of our love and special day. Our blended family works because we all do our bit to keep things level and loveable.",
+    url: "", // TODO add link to this song
+    category: 2
+  },
+  {
+    title: "Brandenburg Concerto no1 in F BWV1046: II. Adagio",
+    artist: "Johann Sebastian Bach",
+    note: "Every now and again I’d put on this sophisticated calming music to think and write for my job. Then I’d get irritated and remember I like to think in silence, so I’d switch it off. As a result, I know this opening concerto very well! It also reminds me of the study hours in our front room at home in Limerick, where that need for silence infused me, sitting at the dining table having had my dinner cooked for me and the coal fire lit for the 3 hours evening school work.  This was the manifestation of my Mam’s practical determination that I would fulfil my potential (resourced by my Dad), and not only finishing secondary school unlike her and Dad but getting to University; unheard of from the likes of us according to Dad. Without my parents what would I be?",
+    url: "https://youtu.be/KLO40TsdiWM?si=DdiIsWDgXKJ4O7OS",
+    category: 3
+  },
+  {
+    title: "Responsory: Favus Distillans",
+    artist: "Hildegard von Bingen",
+    note: "Beautiful female voices from way back when, recently rediscovered in the way that the female always has had to be. I had wonderful opportunities to make music like this both in hours of demanding practice and then in various liturgical formats, worshipping, imploring, seeking forgiveness, extolling the beauty of creation. Inevitably this reminds me of the path I tried but left. The beauty has left its mark though…",
+    url: "https://youtu.be/N3sVZvdsim0?si=fmzTJp8LtTrEQR4I",
+    category: 3
+  },
+  {
+    title: "Pie Jesu",
+    artist: "Sarah Brightman",
+    note: "This is a piercing memory of a moment of sublime breakthrough at a liturgy I organised at the hostel I stayed in Maynooth while pursuing my undergraduate studies as a religious sister in temporary vows. I curated the music for a celebration of Mass and used this as a backdrop for a few moments of reflection following receipt of Holy Communion. The world stopped for me and by the profound silence and stillness in the room I felt the effect it had on others in the room Sublime (and proof that even the likes of Andrew Lloyd Webber can touch the underside of the sky).",
+    url: "https://youtu.be/JTbs51Bs_4w?si=StrowHdjmVJAPWRE",
+    category: 3
+  },
+  {
+    title: "Theodora: As with rosy steps the morn (Handel)",
+    artist: "Lorraine Hunt Liberson",
+    note: "Randomly heard this on the radio and fell in love and searched it down. Then I deliberately created an indelible memory: early for a work meeting at Goldney Hall at the University, I sat in the beautiful grade listed Goldney garden on an equally beautiful morning and listened over and over again. Not many people are lucky enough to work in such surroundings and be able to create a moment of the sublime and fall into it.",
+    url: "https://youtu.be/3TkNh32IY28?si=-7PG1lF-wBowNgDS",
+    category: 3
+  },
+  {
+    title: "If I Didn't Have You",
+    artist: "Amanda Marshall",
+    note: "'Our Song'- the one I fell in love to and we fell in love together. The opening whistle always brings me back to Southampton, that feeling of falling, falling, falling into two not one… I thought we’d have more moments, but each has been precious even when fraught.",
+    url: "",
+    category: 7,
+    subcategory: "1"
+  },
+  {
+    title: "Wherever You Will Go",
+    artist: "Charlene Soraia",
+    note: "Sarah introduced me to this and the lyrics appealed; you have run away with my heart though too sadly appropriate because we can’t go together…",
+    url: "",
+    category: 7,
+    subcategory: "1"
+  },
+  {
+    title: "You Do Something To Me",
+    artist: "Cole Porter",
+    note: "The song that is my gift to Sarah from my favourite era and composer.",
+    url: "",
+    category: 7,
+    subcategory: "1"
+  },
+  {
+    title: "Chain Reaction",
+    artist: "Diana Ross",
+    note: "Warning: sexually explicit. I have a vivid memory of sitting in Southampton the first time I felt well after my PE and pneumonia in the late 1990s and chair dancing to this over and over again. I was happy - and the memory has reminded me not to take even scraps of wellness for granted this past while. And it’s upbeat, and who refuses a double entendre like this one, eh?",
+    url: "",
+    category: 7,
+    subcategory: "2"
+  },
+  {
+    title: "Closer",
+    artist: "Tegan and Sara",
+    note: "Singing lesbian sisters! Warning: sexually explicit. Sarah in the frame again. Wish we had more time for the dreams…",
+    url: "",
+    category: 7,
+    subcategory: "2"
+  },
+  {
+    title: "Lunch",
+    artist: "Billie Eillish",
+    note: "Warning: sexually explicit. A recent discovery- I love the explicitness of the lyrics and how the lady love and lady garden can be front and centre and unapologetic. I’m jealous for those coming behind… fill your mouths with the food of love!",
+    url: "",
+    category: 7,
+    subcategory: "2"
+  },
+  {
+    title: "Hold My Hand",
+    artist: "Jesse Glynne",
+    note: "To have someone to hold your hand: normal one, bockety one, doesn’t matter to Sarah and allows me to be disabled, to be me.",
+    url: "",
+    category: 7,
+    subcategory: "3"
+  },
+  {
+    title: "The Island",
+    artist: "Dolores Keane",
+    note: "The song, the voice, the politics, in the end the personal by the universal sea.",
+    url: "",
+    category: 7,
+    subcategory: "3"
+  },
+  {
+    title: "Feet of a Dancer",
+    artist: "Maura O’Connell",
+    note: "Loved in my earlier years now the chorus carries my love and endless wishes for Sarah x",
+    url: "",
+    category: 7,
+    subcategory: "3"
+  },
+
+];
+
+
+// {    title: "",
+//     artist: "",
+//     note: "",
+//     url: "",
+//     category: 3,
+//     subcategory: ""}
 
 const poems = [
   {

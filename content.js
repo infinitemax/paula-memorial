@@ -105,7 +105,7 @@ const music = [
   },
   {
     title: "The Walls of Limerick",
-    artist: "Traditional",
+    artist: "",
     note: `For my <i>Dad</i>. He loved diddly-di music of all kinds and I know that he wished he could play more – he could play the concertina by ear. I’ve chosen this piece not necessarily because it was his favourite but rather because it epitomises all of the ceidhli music we hummed and beat rhythm to over the years. The title gives something away too!`,
     url: "https://youtu.be/4puxon__85M?si=YcxG3UWslxI46goY",
     category: 2
@@ -193,6 +193,167 @@ const music = [
     note: "Randomly heard this on the radio and fell in love and searched it down. Then I deliberately created an indelible memory: early for a work meeting at Goldney Hall at the University, I sat in the beautiful grade listed Goldney garden on an equally beautiful morning and listened over and over again. Not many people are lucky enough to work in such surroundings and be able to create a moment of the sublime and fall into it.",
     url: "https://youtu.be/3TkNh32IY28?si=-7PG1lF-wBowNgDS",
     category: 3
+  },
+  {
+    title: "What’s another year (1980)",
+    artist: "Johnny Logan",
+    note: "When Ireland was the Eurovision (and not much else!) and this was Eurovision joy and Johnny was Mr Eurovision…",
+    url: "https://youtu.be/XQLmZ3x_Zp8?si=qJb5AYIvxoRkA9-d",
+    category: 4
+  },
+  {
+    title: "Fairytale (2009)",
+    artist: "Alexander Rybek",
+    note: "Just a joyous song with a great fiddle accompaniment. The joy is compounded by the fact that I am in love with a fairytale who fills my life with magic. The story isn’t Sarah’s and mine, but the joy is.",
+    url: "https://youtu.be/1rVY08gRGmA?si=ZwIdscy04PoeRM9l",
+    category: 4
+  },
+  {
+    title: "Satellite (2010)",
+    artist: "Lena",
+    note: "A less sophisticated Eurovision in which unconditional love carried all…",
+    url: "https://youtu.be/93ugDwiBVzA?si=CAdjPnrOqOwhGTXI",
+    category: 4
+  },
+  {
+    title: "Euphoria (2012)",
+    artist: "Loreen",
+    note: "If Johnny is Mr Eurovision then Loreen is the Queen. Just another song channelling happiness and delight.",
+    url: "https://youtu.be/t5qURKt4maw?si=y_QXC2YfiJ4hsGUB",
+    category: 4
+  },
+  {
+    title: "Heroes (2015)",
+    artist: "Mans Zelmerlow",
+    note: "Another Eurovision gotcha, reminding us we are all heroes but that doesn’t mean to say we’re not battling our demons…",
+    url: "https://youtu.be/oAQKr5aJJjQ?si=zAUVQdv1uhsjHNFR",
+    category: 4
+  },
+  {
+    title: "Je me casse (2021)",
+    artist: "Destiny",
+    note: "I’m out of here, you need to treat me right… strong message, stronger rhythm…",
+    url: "https://youtu.be/iwChwkfmDRU?si=Zd6Hcw17GscNa0P2",
+    category: 4
+  },
+  {
+    title: "Cha Cha Cha (2023)",
+    artist: "Kaaajai",
+    note: "Eurovision does Strictly- way to go though I might stop short at pouring the champagne on myself and stick with the dancing!",
+    url: "https://youtu.be/GeHw7OxXcZ8?si=qeINpsYzG5gK-bQc",
+    category: 4
+  },
+  {
+    title: "So long and thanks for all the fish",
+    artist: "Hilary Summers, Kemi Ominiyi and the R’SVP Singers",
+    note: "Yes, it’s mad but it’s SciFi: dolphins saying good bye to the dying planet, it contains the ultimate answer (42) and it’s my big wave off…",
+    url: "https://youtu.be/2v2CNGiK7sQ?si=PGCiKyKxgud4gCNS",
+    category: 5
+  },
+  {
+    title: "Star Trek: First Contact, End Credits",
+    artist: "",
+    note: "The closing music from my favourite Star Trek film and my favourite film of all time. There’s Jean Luc as an action hero, Data exploring his emotions, a glistening evil Borg Queen, timey-wimey messing and great dialogue for an ardent fan. Enjoy the music, echoing my end credits…",
+    url: "https://youtu.be/q1H_OwK9r5s?si=3wILgjkrDWyQJJ_P",
+    category: 5
+  },
+  {
+    title: "Star Trek: Original Series opening credit music",
+    artist: "",
+    note: "My love of science fiction on the tv begins with the original Star Trek series (I had been reading much SF before this). My Dad was rather nonplussed: “you do know that stuff isn’t real?” To which I thought “what is reality?”, ignored him and kept watching.  Welcome to my reality…",
+    url: "https://youtu.be/ZaRIILnSA40?si=HhNhKtYDguAUmFME",
+    category: 5
+  },
+  {
+    title: "Single Ladies (Put a ring on it)",
+    artist: "Beyoncé",
+    note: "What’s to say? Bright, bubbly, fun and don’t you be taking me for granted old manosphere!",
+    url: "https://youtu.be/4m1EFMoRFvY?si=RK6rEl8RWamRZ37k",
+    category: 6
+  },
+  {
+    title: "So what?",
+    artist: "Pink",
+    note: "In your face, Life! We’re all a bit rockstar, need to use them rock moves and ya, forget them expectations!",
+    url: "https://youtu.be/IZBdA6agveQ?si=Y70iF76SEV-5R5pX",
+    category: 6
+  },
+  {
+    title: "Linger",
+    artist: "The Cranberries",
+    note: "Idiosyncratic and from Limerick - what more need I say?",
+    url: "https://youtu.be/gPFP8bdQKJY?si=LPeLqGcIZbGXUy_D",
+    category: 6
+  },
+  {
+    title: "Coming",
+    artist: "David Wilson, Sally Potter, Jimmy Somerville",
+    note: "I like Orlando for its filmic artistry, love Jimmy’s ethereal singing, adore Tilda Swindon’s non-tethered acting, and who objects to lyrics extolling gender freedom and a gentle double entendre?",
+    url: "https://youtu.be/i_sL0yOUj4g?si=qylbyM_kJZXIycnV",
+    category: 6
+  },
+  {
+    title: "No Roots",
+    artist: "Alison Merton",
+    note: "Just like the thudding, the rhythm, the quiet female determination.",
+    url: "https://youtu.be/AfvCPvVgeOc?si=pNVKcYBmhdXxaY2T",
+    category: 6
+  },
+  {
+    title: "Who Am I",
+    artist: "Will Young",
+    note: "The chorus says what I wish for, the voice carries it…",
+    url: "https://youtu.be/60MkK72Bqbs?si=JqAcpLJFovMT55J8",
+    category: 6
+  },
+  {
+    title: "Mercy",
+    artist: "Duffy",
+    note: "A clappy song that makes me happy but what a back story…",
+    url: "https://youtu.be/rOu4wwI0xF8?si=50iLl48j4c30-daA",
+    category: 6
+  },
+  {
+    title: "Sweet Dreams (Are Made of This)",
+    artist: "Eurythmics",
+    note: "Thump, thump, her voice…",
+    url: "https://youtu.be/ozSe_W2C86g?si=e-UFD-HDTE2tUy9N",
+    category: 6
+  },
+  {
+    title: "Chan Chan",
+    artist: "Buena Vista Social Club",
+    note: "Felt really sophisticated finding and loving this cd. I could sense the Cuban warmth on my face… then I went to the cinema in Southampton and watched the related film with two female friends/ work colleagues and felt sophisticated all over again, drinking red wine at an arts centre. Go me!",
+    url: "https://youtu.be/o5cELP06Mik?si=6C5Zk3EADgAnPVtT",
+    category: 6
+  },
+  {
+    title: "Can’t get you out of my head",
+    artist: "Kylie",
+    note: "I mean it’s Kylie, thump/thump/happy/happy and please keep me somewhere small in your head (or not) but thanks for listening.",
+    url: "https://youtu.be/Q9uVkSwD_Hc?si=__S-WD4mEvB3YNdW",
+    category: 6
+  },
+  {
+    title: "Price Tag",
+    artist: "Jessie J",
+    note: "Softer thump, thump; good lyrics, feeds my groove such as it is.",
+    url: "https://youtu.be/Nq2n7eeY8V4?si=6AB6LiTz3sMxVFKj",
+    category: 6
+  },
+  {
+    title: "Primadonna",
+    artist: "Marina and the Diamonds",
+    note: "Another gentle determined song, that rejects the norm. And what if I’m a little primadonna; we all deserve our moments.",
+    url: "https://youtu.be/4m53s9uf3Lg?si=zOFKjl5MY1-brPFu",
+    category: 6
+  },
+  {
+    title: "Just turn around and walk away",
+    artist: "Lilian Bergkvist",
+    note: "Came across a bizarre modern Scandinavian adaption of Hercule Poirot, led by one Sven Hjerson-Ariadne Oliver’s Finnish detective! The title song grabbed me- who knows why so this is here to mark the odd and unexpected!",
+    url: "https://youtu.be/oadtz_1Ayek?si=rKHztAmnw9W8VqN2",
+    category: 6
   },
   {
     title: "If I Didn't Have You",

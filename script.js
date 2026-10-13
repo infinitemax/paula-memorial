@@ -249,3 +249,72 @@ if (paulaAudio && paulaAudioButton) {
       '<span aria-hidden="true">▶</span> Hear Paula\'s voice';
   });
 }
+
+
+
+
+
+////////////// PHOTO CAROUSEL
+
+
+const galleryPhotos = [
+  {
+    src: "photos/paula-face.jpeg",
+    alt: "Paula",
+    caption: "Paula"
+  },
+  {
+    src: "photos/carousel/kitten.jpg",
+    alt: "Paula enjoying a moment with family",
+    caption: "With family"
+  },
+  {
+    src: "photos/carousel/kitten-2.jpg",
+    alt: "A favourite memory of Paula",
+    caption: "A favourite memory"
+  },
+  {
+    src: "photos/carousel/kitten-3.jpg",
+    alt: "A favourite memory of Paula",
+    caption: "A favourite memory"
+  }
+];
+
+const carouselImage = document.querySelector("#carousel-image");
+const carouselCaption = document.querySelector("#carousel-caption");
+const carouselCounter = document.querySelector("#carousel-counter");
+const carouselPrev = document.querySelector("#carousel-prev");
+const carouselNext = document.querySelector("#carousel-next");
+
+if (
+  carouselImage &&
+  carouselCaption &&
+  carouselCounter &&
+  carouselPrev &&
+  carouselNext
+) {
+  let currentPhoto = 0;
+
+  function showPhoto(index) {
+    currentPhoto =
+      (index + galleryPhotos.length) % galleryPhotos.length;
+
+    const photo = galleryPhotos[currentPhoto];
+
+    carouselImage.src = photo.src;
+    carouselImage.alt = photo.alt;
+    carouselCaption.textContent = photo.caption;
+    carouselCounter.textContent =
+      `${currentPhoto + 1} / ${galleryPhotos.length}`;
+  }
+
+  carouselPrev.addEventListener("click", () => {
+    showPhoto(currentPhoto - 1);
+  });
+
+  carouselNext.addEventListener("click", () => {
+    showPhoto(currentPhoto + 1);
+  });
+
+  showPhoto(0);
+}

@@ -636,3 +636,34 @@ footer {
   font-weight: 500;
   font-style: normal;
 }
+
+
+
+/* audio */
+
+
+.audio-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.4rem;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.audio-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.audio-button:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}

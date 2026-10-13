@@ -1,4 +1,3 @@
-
 const musicList = document.querySelector("#music-list");
 
 function createSongElement(song) {
@@ -215,4 +214,38 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+
+
+// AUDIO
+
+const paulaAudio = document.querySelector("#paula-audio");
+const paulaAudioButton = document.querySelector("#paula-audio-button");
+
+if (paulaAudio && paulaAudioButton) {
+  paulaAudioButton.addEventListener("click", () => {
+    if (paulaAudio.paused) {
+      paulaAudio.play().catch((error) => {
+        console.error("Audio playback failed:", error);
+      });
+    } else {
+      paulaAudio.pause();
+    }
+  });
+
+  paulaAudio.addEventListener("play", () => {
+    paulaAudioButton.innerHTML =
+      '<span aria-hidden="true">Ⅱ</span> Pause Paula';
+  });
+
+  paulaAudio.addEventListener("pause", () => {
+    paulaAudioButton.innerHTML =
+      '<span aria-hidden="true">▶</span> Hear Paula\'s voice';
+  });
+
+  paulaAudio.addEventListener("ended", () => {
+    paulaAudioButton.innerHTML =
+      '<span aria-hidden="true">▶</span> Hear Paula\'s voice';
+  });
 }

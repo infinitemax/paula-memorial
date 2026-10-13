@@ -644,13 +644,3 @@ Maybe memory is as real as the present. And no one we have ever loved is truly g
   }
 
 ];
-
-
-```   {
-    title: ``,
-    text: ``,
-    author: ``,
-    backstory: ``
-  }
-
-  ```
